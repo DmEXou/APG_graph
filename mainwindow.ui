@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>906</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>CrossCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>711</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="brash_layout"/>
+   </widget>
+   <widget class="QPushButton" name="station_btn">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>20</y>
+      <width>110</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>110</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Станция</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="path_btn">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>50</y>
+      <width>110</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>110</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Путь</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="calcul_btn">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>80</y>
+      <width>110</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>110</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Найти маршрут</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reset_min_btn">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>110</y>
+      <width>110</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>110</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>85</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Сброс маршрута</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>906</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
