@@ -207,10 +207,13 @@ void MainWindow::calculate_min_val_path(const qreal& x, const qreal& y){
     if(ellipse_it != _ellipse_ptr_list.end()){
         if(!_pair_statuion.first.ellipse){
             _pair_statuion.first = *ellipse_it;
+            ellipse_it->ellipse->setBrush(QBrush(Qt::red));
             return void();
         }
-        else
+        else{
             _pair_statuion.second = *ellipse_it;
+            ellipse_it->ellipse->setBrush(QBrush(Qt::red));
+        }
     }
     auto pnt_begin = _pair_statuion.first.coord.toPoint();
     std::list <QPointF> target_list;
@@ -219,7 +222,7 @@ void MainWindow::calculate_min_val_path(const qreal& x, const qreal& y){
     while (target_list.size() < 10 && i <= 100 ) {
         if(_arr_line.size() == 0 || _ellipse_ptr_list.size() == 0){
             qDebug() << "ERROR vectors";
-            break;
+            return void();
         }
         auto line_it = std::find_if(_arr_line.begin(), _arr_line.end(), [&pnt_begin](const auto& line){
             return (line.pnt_first == pnt_begin || line.pnt_last == pnt_begin) && !line.block;
@@ -332,14 +335,14 @@ void MainWindow::reset_min_btn_clicked(){
     for(auto& ell : _ellipse_ptr_list){
         ell.final_value = 0;
         ell.block = false;
-    }
-    for(auto& line : _arr_line){
-        line.block = false;
+        ell.ellipse->setBrush(QBrush(Qt::blue));
     }
     _pair_statuion = {};
     for(auto& line : _arr_line){
+        line.block = false;
         line.line_ptr->setPen(_pen_line);
     }
+
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event){
